@@ -1,1 +1,1 @@
-* Intro YelpCamp
+# YelpCamp project

@@ -1,1 +1,1 @@
-* Intro to MongoDB / Mongoose
+# Intro to MongoDB / Mongoose
