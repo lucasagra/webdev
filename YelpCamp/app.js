@@ -27,7 +27,7 @@ app.use(methodOverride("_method"));
 app.use(flash());
 
 app.set("view engine", "ejs");
-//  "mongodb+srv://lucas:134685@yelpcamp-8unx7.mongodb.net/test?retryWrites=true&w=majority"
+
 let url = process.env.DATABASEURL || "mongodb://localhost:27017/yelpcamp";
 mongoose.connect(url, { 
     useNewUrlParser: true, 
