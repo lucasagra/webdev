@@ -27,6 +27,7 @@ app.use(methodOverride("_method"));
 app.use(flash());
 
 app.set("view engine", "ejs");
+app.set("port", ( process.env.PORT || 3000 ));
 
 let url = process.env.DATABASEURL || "mongodb://localhost:27017/yelpcamp";
 mongoose.connect(url, { 
@@ -65,6 +66,6 @@ app.use("/campgrounds/", campgroundsRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 
 // SERVER
-app.listen(3000, function() { 
-    console.log('YelpCamp server started...'); 
+app.listen(app.get("port"), function() { 
+    console.log("YelpCamp server started..."); 
 });
